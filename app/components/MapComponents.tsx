@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
@@ -17,7 +18,7 @@ const DynamicMap = dynamic(() => import('./Map'), {
 })
 
 // Approximate bounds for Delhi NCR
-const delhiNCRBounds: LatLngBoundsExpression = [
+const delhiNCRBounds: [[number, number], [number, number]] = [
   [28.2, 76.5], // Southwest corner
   [29.0, 77.8]  // Northeast corner
 ]
