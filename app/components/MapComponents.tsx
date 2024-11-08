@@ -200,7 +200,7 @@ export default function MapComponent() {
   }, [])
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 p-4">
+    <div className="flex flex-col md:flex-row gap-4 p-4 ">
       <Card className="flex-1">
         <CardHeader>
           <CardTitle>Delhi NCR Map Selector</CardTitle>

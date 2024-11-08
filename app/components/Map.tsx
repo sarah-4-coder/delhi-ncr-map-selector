@@ -48,7 +48,7 @@ export default function Map({ center, zoom, bounds, markers, selectedArea, curre
         zoom,
         maxBounds: bounds,
         minZoom: 10,
-        scrollWheelZoom: false,
+        scrollWheelZoom: true,
       })
 
       const tileLayer = new TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
