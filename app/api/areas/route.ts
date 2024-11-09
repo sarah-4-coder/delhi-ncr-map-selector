@@ -26,7 +26,7 @@ export async function GET(request: Request) {
   } catch (error) {
     console.error("Error in GET /api/areas:", error);
     return NextResponse.json(
-      { error: "Internal Server Error", details: error.message },
+      { error: "Internal Server Error", details: (error as Error).message },
       { status: 500 }
     );
   }
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Error in POST /api/areas:", error);
     return NextResponse.json(
-      { error: "Internal Server Error", details: error.message },
+      { error: "Internal Server Error", details: (error as Error).message },
       { status: 500 }
     );
   }
@@ -91,7 +91,7 @@ export async function DELETE(request: Request) {
   } catch (error) {
     console.error("Error in DELETE /api/areas:", error);
     return NextResponse.json(
-      { error: "Failed to delete area", details: error.message },
+      { error: "Failed to delete area", details: (error as Error).message },
       { status: 500 }
     );
   }
